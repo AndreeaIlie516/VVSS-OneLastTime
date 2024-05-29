@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 abstract class Animal {
     int id;
 
@@ -8,10 +10,17 @@ abstract class Animal {
     public int getId() {
         return id;
     }
-}
 
-class Mouse extends Animal {
-    public Mouse() {
-        super(1);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return id == animal.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
