@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BBT {
+public class BBTest {
     @Test
     public void testFindPair_EmptyArray() {
         List<Animal> animals = new ArrayList<>();
